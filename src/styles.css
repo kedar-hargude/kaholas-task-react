@@ -1,0 +1,184 @@
+/* color used here: #503dd4 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --base: #503dd4;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+.header{
+    /* border: 2px purple solid; */
+    padding: 20px;
+}
+
+.header > h1{
+    font-size: 50px;
+    margin: 0;
+}
+
+.sub-header{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: grey;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.in-circle {
+    display: block;
+    background: white;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: Verdana;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.in-circle:hover{
+    background: grey;
+    color: white;
+}
+
+.small > img{
+    width: 25px;
+    height: 25px;
+}
+
+.main-container{
+    /* border: 2px red solid; */
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.info-container{
+    /* border: 2px green solid; */
+    width: 100%;
+    max-width: 820px;
+}
+
+.course-info > p{
+    font-size: 20px;
+    font-weight: 500;
+    word-spacing: 2px;
+    line-height: 32px;
+    margin: 10px 0;
+}
+
+.teacher-info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--base);
+}
+
+.teacher-info > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.teacher-info > h3{
+    margin-left: 10px;
+    font-size: 20px;
+    word-spacing: 3px;
+}
+
+.teacher-rating-info{
+    display: flex;
+    align-items: center;
+}
+
+.class-rating-info{
+    display: flex;
+    align-items: center;
+}
+
+.teacher-rating-info > p{
+    margin-left: 10px;
+}
+
+.class-rating-info > p{
+    margin-left: 10px;
+}
+
+.info-container > p{
+    font-size: 18px;
+    font-weight: 520;
+    margin: 5px 0 30px;
+}
+
+.bottom-buttons{
+    display: flex;
+}
+
+.schedule-btn{
+    /* border: 2px solid red; */
+    width: 270px;
+    border-radius: 25px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--base);
+    color: white;
+}
+
+.schedule-btn > p{
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.schedule-btn > img{
+    width: 40px;
+    height: 40px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+}
+
+.save-btn, .share-btn{
+    margin-left: 80px;
+}
+
+.save-btn > p, .share-btn > p{
+    font-size: 20px;
+    margin: 0 0 0 8px;
+    font-weight: 600;
+    color: var(--base)
+}
+
+.image-grid{
+    /* border: 2px brown solid; */
+    display: grid;
+    width: 100%;
+    max-width: 650px;
+    padding : 0px 0px 20px 20px;
+    grid-template-columns: 320px 300px;
+    grid-template-rows: 190px 190px;
+    grid-gap: 15px;
+    overflow: hidden;
+}
+
+.item-1{
+    grid-row: span 2;
+    border-radius: 20px 0 0 0;
+}
+
+.item-2{
+    border-radius: 0 20px 0 0;
+}
