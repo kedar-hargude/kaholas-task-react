@@ -1,49 +1,49 @@
 import React from "react"
-import fullInfo from "../data"
 
-export default function Card(){
+export default function Card(props){
 
-    const data = fullInfo.data.info[0];
-
-    const [saved, setSaved] = React.useState(data.isSaved);
+    const [saved, setSaved] = React.useState(props.isSaved);
 
     function toggleSave(){
         setSaved(prevState => !prevState)
     }
 
-    const filledStarsTeacher = [...Array(data.teacherStars)].map(ele => <img src="/images/star-filled.png" />)
-    const emptyStarsTeacher = [...Array(5 - data.teacherStars)].map(ele => <img src="/images/star-empty.png" />)
+    console.log(props.teacherStars);
+    console.log(props.classStars);
 
-    const filledStarsClass = [...Array(data.classStars)].map(ele => <img src="/images/star-filled.png" />)
-    const emptyStarsClass = [...Array(5 - data.classStars)].map(ele => <img src="/images/star-empty.png" />)
+    const filledStarsTeacher = [...Array(Math.round(props.teacherStars))].map(ele => <img src="/images/star-filled.png" />)
+    const emptyStarsTeacher = [...Array(5 - Math.round(props.teacherStars))].map(ele => <img src="/images/star-empty.png" />)
+
+    const filledStarsClass = [...Array(Math.round(props.classStars))].map(ele => <img src="/images/star-filled.png" />)
+    const emptyStarsClass = [...Array(5 - Math.round(props.classStars))].map(ele => <img src="/images/star-empty.png" />)
     
 
     return(
         <div>
             <div className="header">
-                <h1>{data.header}</h1>
+                <h1>{props.header}</h1>
                 <p className="sub-header">Multi-Day Course <a className="in-circle" href="#">?</a></p>
             </div>
             <div className="main-container">
                 <div className="info-container">
                     <div className="course-info">
-                        <p>{data.courseInfo}</p>
+                        <p>{props.courseInfo}</p>
                     </div>
                     <div className="teacher-info">
-                        <img src={`/images/${data.teacherUrl}`} />
-                        <h3>{data.teacherName}</h3>
+                        <img src={`/images/${props.teacherUrl}`} />
+                        <h3>{props.teacherName}</h3>
                     </div>
                     <div className="teacher-rating-info small">
                         {filledStarsTeacher}
                         {emptyStarsTeacher}
-                        <p>{data.teacherReviewNumber} total reviews for this teacher</p>
+                        <p>{props.teacherReviewNumber} total reviews for this teacher</p>
                     </div>
                     <div className="class-rating-info small">
                         {filledStarsClass}
                         {emptyStarsClass}
-                        <p>{data.classReviewNumber} reviews for this class</p>
+                        <p>{props.classReviewNumber} reviews for this class</p>
                     </div>
-                    <p>Completed by {data.totalCompletedLearners} learners</p>
+                    <p>Completed by {props.totalCompletedLearners} learners</p>
                     <div className="bottom-buttons">
                         <div className="schedule-btn btn">
                             <p>See class Schedule</p>
