@@ -1,5 +1,7 @@
 # Just a card component for a course
 
+## Check it out [here](https://kaholas-task-kedar.netlify.app/)
+
 ![](/public/images/screenshot.png?raw=true "Optional Title")
 
 In the project directory, you can run:
